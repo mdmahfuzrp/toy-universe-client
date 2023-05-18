@@ -1,7 +1,11 @@
+import NavBar from "../../../Shared/NavBar/NavBar";
+
 const Home = () => {
     return (
         <div>
-            Home
+            <NavBar></NavBar>
+
+            
         </div>
     );
 };
