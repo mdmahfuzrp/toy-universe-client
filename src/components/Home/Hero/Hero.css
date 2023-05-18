@@ -1,0 +1,9 @@
+#hero-img{
+  position: relative;
+  animation: mymove 2s 1s infinite;
+}
+@keyframes mymove {
+    0% {top: 0px;}
+    50% {top: 15px;}
+    100% {top: 0;}
+  }
