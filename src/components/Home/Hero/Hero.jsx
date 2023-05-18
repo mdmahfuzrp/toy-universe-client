@@ -30,8 +30,9 @@ const Hero = () => {
                                         'Avengers Toys', // Types 'One'
                                         1000, // Waits 1s
                                         'Marvel Heros', // Deletes 'One' and types 'Two'
-                                        2000, // Waits 2s
+                                        1000, // Waits 2s
                                         'All Villain', // Types 'Three' without deleting 'Two'
+                                        1000,
                                         () => {
                                             console.log('Sequence completed'); // Place optional callbacks anywhere in the array
                                         }
