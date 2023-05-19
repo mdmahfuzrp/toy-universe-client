@@ -7,7 +7,7 @@ import './Hero.css'
 
 const Hero = () => {
     return (
-        <div className="py-7">
+        <div className="sm:w-11/12 my-7 mx-auto">
             <div className="hero min-h-[500px] bg-slate-50 rounded-lg">
                 <div className="hero-content w-full flex-col lg:flex-row-reverse justify-evenly">
                     <div id="hero-img">
@@ -46,7 +46,7 @@ const Hero = () => {
                         </p>
                         <ul className="flex">
                             <Link className="flex items-center text-lg btn btn-md capitalize font-medium px-6 rounded-none btn-outline hover:btn-error">Buy Now <span className="ms-2"><FaCartArrowDown /></span></Link>
-                            <Link className="flex items-center text-lg btn btn-md capitalize font-medium px-6 rounded-none btn-outline hover:btn-error ms-0 md:ms-3">Get Started <span className="ms-2"><FaArrowRight /></span></Link>
+                            <Link to='/login' className="flex items-center text-lg btn btn-md capitalize font-medium px-6 rounded-none btn-outline hover:btn-error ms-0 md:ms-3">Get Started <span className="ms-2"><FaArrowRight /></span></Link>
                         </ul>
                     </div>
                 </div>

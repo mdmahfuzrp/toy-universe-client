@@ -1,0 +1,114 @@
+.galleryItem{
+    border: 2px solid rgb(218, 216, 216);
+    border-radius: 10px;
+}
+.galleryItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .galleryContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .galleryWrapper {
+    padding: 2% 10%;
+  }
+  
+  .filterItem ul {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .filterItem ul button {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  .filterItem ul button:hover {
+    color: #f87272;
+    cursor: pointer;
+  }
+  .img-parent-gallery{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .img-parent-gallery::before{
+    position: absolute;
+    content: 'Avenger Toys';
+    font-size: 25px;
+    width: 100%;
+    height: 50%;
+    opacity: 0;
+    top: -50%;
+    left: 0;
+    padding-bottom: 2px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    color: #f87272;
+    font-weight: 600;
+    background-color: rgba(23, 22, 22, 0.807);
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: .3s ease-in-out;
+  }
+  .img-parent-gallery::after{
+    position: absolute;
+    content: 'Scroll For More Toys';
+    font-size: 20px;
+    width: 100%;
+    height: 50%;
+    opacity: 0;
+    bottom: -50%;
+    left: 0;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    color: white;
+    background-color: rgba(23, 22, 22, 0.807);
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    transition: .3s ease-in-out;
+  }
+  .img-parent-gallery:hover::before{
+    top: 0;
+    opacity: 1;
+  }
+  .img-parent-gallery:hover::after{
+    bottom: 0;
+    opacity: 1;
+  }
+  .galleryItem img {
+    border-radius: 15px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .galleryContainer {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+  }
+  @media screen and (max-width: 765px) {
+    .galleryContainer {
+        grid-template-columns: 1fr 1fr;
+      }
+  }
+  @media screen and (max-width: 640px) {
+    .galleryContainer {
+        grid-template-columns: 1fr;
+      }
+  }

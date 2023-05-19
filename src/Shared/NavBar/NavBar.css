@@ -1,0 +1,5 @@
+#user-pic:hover #user-name{
+    top: 8px;
+    opacity: 1;
+    transition: .3s ease-in-out;
+}

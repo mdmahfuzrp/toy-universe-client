@@ -13,7 +13,7 @@ const Footer = () => {
             <div>
                 <img className="w-[100px]" src={logo} alt="" />
             </div>
-            <div className="footer-center">
+            <div className="footer-center space-y-3">
                 <div className="grid grid-flow-col gap-4">
                     <Link className={selected === 'home' ? 'text-error' : ''}
                         onClick={() => handleItemClick('home')} to='/'>Home</Link>
@@ -34,7 +34,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+                    <p>Copyright © 2023 - All right reserved by <Link to='/' className="link">Mahfuz RP</Link></p>
                 </div>
             </div>
 
