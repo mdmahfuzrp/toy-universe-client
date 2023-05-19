@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import NavBar from '../../Shared/NavBar/NavBar';
 import Footer from '../../Shared/Footer/Footer';
 import { FaPhotoVideo, FaUserCircle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import { AuthContext } from '../../AuthProviders/AuthProviders';
 
 const AddToy = () => {
+    const {user} = useContext(AuthContext);
 
     const handleAddToySubmit = (event) => {
         event.preventDefault();
@@ -21,7 +24,25 @@ const AddToy = () => {
         const sellerEmail = form.sellerEmail.value;
 
         const newToyInfo = {toyName, category, description, toyPhoto, price, rating, quantity, sellerName, sellerEmail}
-        console.log(newToyInfo);
+        
+        fetch('http://localhost:5000/toys', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(newToyInfo)
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.insertedId){
+                Swal.fire({
+                    title: `Successful`,
+                    text: 'Toy added successful',
+                    icon: 'success',
+                    confirmButtonText: 'Continue'
+                  })
+            }
+        })
     }
 
     return (
@@ -170,6 +191,7 @@ const AddToy = () => {
                                             autoComplete="sellerName"
                                             className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-error placeholder:text-gray-400  sm:text-md sm:leading-6 outline-none"
                                             placeholder='Seller name'
+                                            defaultValue={user?.displayName}
                                         />
                                     </div>
                                 </div>
@@ -186,6 +208,7 @@ const AddToy = () => {
                                             autoComplete="sellerEmail"
                                             className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-error placeholder:text-gray-400  sm:text-md sm:leading-6 outline-none"
                                             placeholder='Seller email'
+                                            defaultValue={user?.email}
                                         />
                                     </div>
                                 </div>
