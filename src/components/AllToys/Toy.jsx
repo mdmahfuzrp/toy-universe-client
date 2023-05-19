@@ -30,16 +30,15 @@ const Toy = ({ toy, digit }) => {
             </td>
             <td>
                 {
-                    toy?.toyName && <span className="block">{sellerName}</span>
+                    toy?.sellerName && <span className="block">{sellerName}</span>
                 }
                 <span className="badge badge-error text-white font-[300] p-1 badge-md">{sellerEmail}</span>
             </td>
-            <td className='text-lg'><span className='text-error'>$ </span>{price}.00</td>
+            <td className='text-lg'><span className='text-error'>$ </span>{price}</td>
             <td className='text-lg'><span className='text-error'>{quantity}</span> <small className='text-gray-500'>in stock</small></td>
             <th>
                 {
-                    user ?
-                        <label htmlFor="toy-modal" className="btn btn-sm px-2 shadow-md btn-error text-white font-normal capitalize text-[18px]">View Details</label>
+                    user ? <label htmlFor="toy-modal" className="btn btn-sm px-2 shadow-md btn-error text-white font-normal capitalize text-[18px]">View Details</label>
                         : <Link to='/login' className="btn btn-sm px-2 shadow-md btn-error text-white font-normal capitalize text-[18px]">View Details</Link>
                 }
                 {/* Put this part before </body> tag */}
@@ -47,8 +46,8 @@ const Toy = ({ toy, digit }) => {
                 <div className="modal">
                     <div className="modal-box w-11/12 max-w-4xl px-10">
                         <h3 className="font-semibold text-error text-xl md:text-4xl">{toyName}</h3>
-                        <div className='max-w-[100px]'>
-                            <p className="max-w-[100px] font-normal text-gray-500 pb-2">{description}</p>
+                        <div className=''>
+                            <p className="font-normal text-gray-500 pb-2">{description}</p>
                         </div>
                         <div className=' w-full grid grid-cols-1 md:grid-cols-2 py-3'>
                             <div className='max-w-full md:max-w-[300px] mx-auto border rounded-lg p-5 mb-4 md:m-0'>

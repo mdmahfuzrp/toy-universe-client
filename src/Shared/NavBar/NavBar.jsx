@@ -26,10 +26,14 @@ const NavBar = () => {
             onClick={() => handleItemClick('home')} to='/'>Home</Link>
         <Link className={selected === 'allToys' ? 'text-error' : ''}
             onClick={() => handleItemClick('allToys')} to='/allToys'>All Toys</Link>
-        <Link className={selected === 'myToys' ? 'text-error' : ''}
-            onClick={() => handleItemClick('myToys')} to='/myToys'>My Toys</Link>
-        <Link className={selected === 'addToy' ? 'text-error' : ''}
-            onClick={() => handleItemClick('addToy')} to='/addToy'>Add A Toy</Link>
+        {
+            user && <>
+                <Link className={selected === 'myToys' ? 'text-error' : ''}
+                    onClick={() => handleItemClick('myToys')} to='/myToys'>My Toys</Link>
+                <Link className={selected === 'addToy' ? 'text-error' : ''}
+                    onClick={() => handleItemClick('addToy')} to='/addToy'>Add A Toy</Link>
+            </>
+        }
         <Link className={selected === 'blog' ? 'text-error' : ''}
             onClick={() => handleItemClick('blog')} to='/blog'>Blog</Link>
     </>
