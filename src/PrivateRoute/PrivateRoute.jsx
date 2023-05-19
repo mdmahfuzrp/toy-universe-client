@@ -8,7 +8,7 @@ const PrivateRoute = ({ children }) => {
     const location = useLocation();
 
     if (loading) {
-        return <div className='w-fit mx-auto mt-20'>
+        return <div className='w-fit mx-auto mt-64'>
             <MagnifyingGlass
                 visible={true}
                 height="80"

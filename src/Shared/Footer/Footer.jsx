@@ -10,8 +10,8 @@ const Footer = () => {
     }
     return (
         <footer className="footer items-center mx-auto justify-around p-10 bg-base-200 text-base-content rounded">
-            <div>
-                <img className="w-[100px]" src={logo} alt="" />
+            <div className="w-full">
+                <img className="w-[100px] mx-auto" src={logo} alt="" />
             </div>
             <div className="footer-center space-y-3">
                 <div className="grid grid-flow-col gap-4">
@@ -39,8 +39,8 @@ const Footer = () => {
             </div>
 
             <div>
-                <div>
-                    <span className="footer-title">Newsletter</span>
+                <div className="">
+                    <span className="footer-title text-[16px]">Newsletter</span>
                     <div className="form-control">
                         <label className="label ps-0">
                             <span className="label-text">Enter your email address</span>
