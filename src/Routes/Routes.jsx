@@ -6,6 +6,7 @@ import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Profile from "../components/Profile/Profile";
+import AddToy from "../components/AddToy/AddToy";
 
 const router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
             {
                 path: 'profile',
                 element: <PrivateRoute><Profile></Profile></PrivateRoute>
+            },
+            {
+                path: 'addToy',
+                element: <AddToy></AddToy>
             }
         ]
     },

@@ -32,8 +32,6 @@ const NavBar = () => {
             onClick={() => handleItemClick('addToy')} to='/addToy'>Add A Toy</Link>
         <Link className={selected === 'blog' ? 'text-error' : ''}
             onClick={() => handleItemClick('blog')} to='/blog'>Blog</Link>
-            <Link className={selected === 'blog' ? 'text-error' : ''}
-            onClick={() => handleItemClick('blog')} to='/profile'>Profile</Link>
     </>
 
     return (
