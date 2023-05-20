@@ -14,7 +14,7 @@ const AllToys = () => {
 
     // Data from other place
     useEffect(() => {
-        const url = `http://localhost:5000/toys?page=${currentPage}&limit=${itemsPerPage}`;
+        const url = `https://marvel-universe-server.vercel.app/toys?page=${currentPage}&limit=${itemsPerPage}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setToys(data));

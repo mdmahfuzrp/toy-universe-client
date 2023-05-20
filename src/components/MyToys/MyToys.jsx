@@ -11,7 +11,7 @@ const MyToys = () => {
 
     // Load My All Toys From DataBase
     useEffect(() => {
-        fetch(`http://localhost:5000/toys/email?email=${user?.email}`)
+        fetch(`https://marvel-universe-server.vercel.app/toys/email?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setMyToys(data);
@@ -42,7 +42,7 @@ const MyToys = () => {
             if (result.isConfirmed) {
 
                 // Here Are Delete Operation Start
-                fetch(`http://localhost:5000/toys/${id}`, {
+                fetch(`https://marvel-universe-server.vercel.app/toys/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
