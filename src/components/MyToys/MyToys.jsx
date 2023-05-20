@@ -8,16 +8,18 @@ import Swal from 'sweetalert2';
 const MyToys = () => {
     const [myToys, setMyToys] = useState([]);
     const { user } = useContext(AuthContext);
-
+    const [sort, setSort] = useState('price');
+    const [order, setOrder] = useState('1');
+    const [selected, setSelected] = useState('low');
     // Load My All Toys From DataBase
     useEffect(() => {
-        fetch(`https://marvel-universe-server.vercel.app/toys/email?email=${user?.email}`)
+        fetch(`http://localhost:5000/toys/email?email=${user?.email}&sort=${sort}&order=${order}`)
             .then(res => res.json())
             .then(data => {
                 setMyToys(data);
             })
-    }, [])
-    
+    }, [order])
+
 
     const handleDeleteToy = (id) => {
 
@@ -42,7 +44,7 @@ const MyToys = () => {
             if (result.isConfirmed) {
 
                 // Here Are Delete Operation Start
-                fetch(`https://marvel-universe-server.vercel.app/toys/${id}`, {
+                fetch(`http://localhost:5000/toys/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -56,7 +58,7 @@ const MyToys = () => {
                                 'success'
                             )
                         }
-                        else{
+                        else {
                             swalWithBootstrapButtons.fire(
                                 'Cancelled',
                                 'Something wrong, please try again',
@@ -64,7 +66,7 @@ const MyToys = () => {
                             )
                         }
                     })
-                    // -----------------------------------
+                // -----------------------------------
             } else if (
                 /* Read more about handling dismissals below */
                 result.dismiss === Swal.DismissReason.cancel
@@ -77,6 +79,12 @@ const MyToys = () => {
             }
         })
     }
+    const handleSetOrder = (number) => {
+        setOrder(number);
+    }
+    const handleItemClick = (items) => {
+        setSelected(items);
+    }
 
     return (
         <div>
@@ -84,17 +92,26 @@ const MyToys = () => {
 
             {/* Code For My Toys Section */}
             {/* All Toys Code */}
-            <div className="overflow-x-auto sm:w-11/12 my-7 mx-auto shadow-lg">
-                <table className="table table-zebra w-full">
+            <div className="overflow-x-auto sm:w-11/12 my-7 mx-auto">
+                <div className='w-full flex flex-col items-end mb-2'>
+                    <div>
+                        <h1 className='mb-1 text-lg text-gray-400 text-right'>Search by Price</h1>
+                        <div>
+                            <button className={`border border-error ${selected === 'low' ? 'bg-error text-white' : ''}`} onClick={() => handleItemClick('low')}><p className='py-1 px-2' onClick={() => handleSetOrder(1)}>Low to High</p></button>
+                            <button className={`border border-error ${selected === 'high' ? 'bg-error text-white' : ''}`} onClick={() => handleItemClick('high')}><p className='py-1 px-2' onClick={() => handleSetOrder(-1)}>High to Low</p></button>
+                        </div>
+                    </div>
+                </div>
+                <table className="table table-zebra w-full border rounded-none">
                     {/* head */}
                     <thead>
                         <tr>
-                            <th></th>
+                            <th className='rounded-none'></th>
                             <th className='text-[16px] font-semibold'>Name & Category</th>
                             <th className='text-[16px] font-semibold'>Toy Seller Information</th>
                             <th className='text-[16px] font-semibold'>Price</th>
                             <th className='text-[16px] font-semibold'>Quantity</th>
-                            <th></th>
+                            <th className='rounded-none'></th>
                         </tr>
                     </thead>
 
@@ -113,12 +130,12 @@ const MyToys = () => {
                     {/* foot */}
                     <tfoot>
                         <tr>
-                            <th></th>
+                            <th className='rounded-none'></th>
                             <th className='text-[16px] font-semibold'>Name & Category</th>
                             <th className='text-[16px] font-semibold'>Toy Seller Information</th>
                             <th className='text-[16px] font-semibold'>Price</th>
                             <th className='text-[16px] font-semibold'>Quantity</th>
-                            <th></th>
+                            <th className='rounded-none'></th>
                         </tr>
                     </tfoot>
                 </table>

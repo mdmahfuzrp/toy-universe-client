@@ -1,4 +1,3 @@
-import { GalleryData } from "./GalleryData";
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import './Gallery.css';
@@ -9,7 +8,7 @@ const Gallery = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch('https://marvel-universe-server.vercel.app/toyGallery')
+        fetch('http://localhost:5000/toyGallery')
         .then(res => res.json())
         .then(GalleryData => {
             setData(GalleryData);

@@ -28,7 +28,7 @@ const UpdateToy = () => {
         const sellerEmail = form.sellerEmail.value;
 
         const updatedToy = { toyName, category, description, toyPhoto, price, rating, quantity, sellerName, sellerEmail }
-        fetch(`https://marvel-universe-server.vercel.app/toys/${_id}`, {
+        fetch(`http://localhost:5000/toys/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',

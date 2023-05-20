@@ -40,7 +40,7 @@ const router = createBrowserRouter([
             {
                 path: 'allToys',
                 element: <AllToys></AllToys>,
-                loader: ()=> fetch('https://marvel-universe-server.vercel.app/totalToys')
+                loader: ()=> fetch('http://localhost:5000/totalToys')
             },
             {
                 path: 'myToys',
@@ -49,12 +49,12 @@ const router = createBrowserRouter([
             {
                 path: 'myToys/:id',
                 element: <PrivateRoute><UpdateToy></UpdateToy></PrivateRoute>,
-                loader: ({params}) => fetch(`https://marvel-universe-server.vercel.app/toys/${params.id}`)
+                loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
             },
             {
                 path: 'allToys/:id',
                 element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-                loader: ({params}) => fetch(`https://marvel-universe-server.vercel.app/toys/${params.id}`)
+                loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
             }
         ]
     },

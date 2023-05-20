@@ -24,7 +24,7 @@ const MyToy = ({ myToy, digit, handleDeleteToy }) => {
                     </div>
                     <div>
                         <div className="font-normal text-lg">{toyName}</div>
-                        <div className="text-md font-normal text-error"><span className='badge rounded-md p-1 badge-error font-normal'>Category :</span> <span className='text-gray-500'>{category}</span></div>
+                        <div className="text-md font-normal text-error"><span className='badge rounded-md p-1 badge-error font-normal text-white'>Category :</span> <span className='text-gray-500'>{category}</span></div>
                     </div>
                 </div>
             </td>
