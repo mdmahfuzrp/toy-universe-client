@@ -48,12 +48,12 @@ const router = createBrowserRouter([
             },
             {
                 path: 'myToys/:id',
-                element: <UpdateToy></UpdateToy>,
+                element: <PrivateRoute><UpdateToy></UpdateToy></PrivateRoute>,
                 loader: ({params}) => fetch(`https://marvel-universe-server.vercel.app/toys/${params.id}`)
             },
             {
                 path: 'allToys/:id',
-                element: <ToyDetails></ToyDetails>,
+                element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
                 loader: ({params}) => fetch(`https://marvel-universe-server.vercel.app/toys/${params.id}`)
             }
         ]
