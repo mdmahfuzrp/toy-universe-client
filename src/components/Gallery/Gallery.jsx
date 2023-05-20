@@ -26,14 +26,14 @@ const Gallery = () => {
             <div className="galleryWrapper">
                 <div className="galleryContainer" data-aos="fade-up">
                     {
-                        data.map((item) => <motion.div 
+                        data.map((item, index) => <motion.div 
                             initial={{ y: "2rem", opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{
                                 duration: 2,
                                 type: "spring"
                             }}
-                            key={item.id} className="img-parent-gallery galleryItem"><img src={item.image} /></motion.div>)
+                            key={item._id} className="img-parent-gallery galleryItem"><img src={item.image} /></motion.div>)
                     }
                 </div>
             </div>

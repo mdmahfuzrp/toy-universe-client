@@ -79,7 +79,7 @@ const AddToy = () => {
                                 </div>
                                 <div className="sm:col-span-3">
                                     <label htmlFor="category" className="block text-md font-medium leading-6 text-gray-900">
-                                        Country
+                                        Category
                                     </label>
                                     <div className="mt-2">
                                         <select
@@ -88,9 +88,9 @@ const AddToy = () => {
                                             autoComplete="category"
                                             className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-error sm:max-w-xs sm:text-md sm:leading-6 outline-none"
                                         >
-                                            <option>Marvel Heros</option>
-                                            <option>Avenger Toys</option>
-                                            <option>Marvel Villains</option>
+                                            <option>Heros</option>
+                                            <option>Toys</option>
+                                            <option>Villains</option>
                                         </select>
                                     </div>
                                 </div>

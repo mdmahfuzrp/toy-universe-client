@@ -24,7 +24,7 @@ const Toy = ({ toy, digit }) => {
                     </div>
                     <div>
                         <div className="font-normal text-lg">{toyName}</div>
-                        <div className="text-md font-normal text-error"><span className='badge rounded-md p-1 badge-error font-normal'>Category :</span> <span className='text-gray-500'>{category}</span></div>
+                        <div className="text-md font-normal text-error"><span className='badge rounded-md p-1 badge-error font-normal text-white'>Category :</span> <span className='text-gray-500'>{category}</span></div>
                     </div>
                 </div>
             </td>
@@ -32,7 +32,7 @@ const Toy = ({ toy, digit }) => {
                 {
                     toy?.sellerName && <span className="block">{sellerName}</span>
                 }
-                <span className="badge badge-error text-white font-[300] p-1 badge-md">{sellerEmail}</span>
+                <span className="badge badge-error font-normal text-white p-1 badge-md">{sellerEmail}</span>
             </td>
             <td className='text-lg'><span className='text-error'>$ </span>{price}</td>
             <td className='text-lg'><span className='text-error'>{quantity}</span> <small className='text-gray-500'>in stock</small></td>
