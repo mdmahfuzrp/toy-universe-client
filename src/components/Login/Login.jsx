@@ -3,9 +3,11 @@ import Footer from "../../Shared/Footer/Footer";
 import NavBar from "../../Shared/NavBar/NavBar";
 import loginImg from '../../assets/730_generated.jpg'
 import { FaEye, FaEyeSlash, FaGoogle, FaGithub, FaFacebookF } from 'react-icons/fa';
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProviders/AuthProviders";
 import Swal from "sweetalert2";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Login = () => {
     const { login, googleLogin, user } = useContext(AuthContext);
@@ -53,14 +55,18 @@ const Login = () => {
     const handleOnChange = () =>{
         setError('');
     }
+    
+    useEffect(()=>{
+        AOS.init({duration: 2000});
+    },[])
     return (
         <div>
             <NavBar></NavBar>
             {/* Login Page Code */}
-            <div className="sm:w-10/12 my-7 sm:p-5 mx-auto grid grid-cols-1 md:grid-cols-2 justify-center items-center">
+            <div className="overflow-hidden sm:w-10/12 my-7 sm:p-5 mx-auto grid grid-cols-1 md:grid-cols-2 justify-center items-center">
 
                 {/* Left Side Info*/}
-                <div className="w-full flex flex-col items-center justify-center text-center md:text-left mb-5 md:mb-0">
+                <div data-aos="fade-right" className="w-full flex flex-col items-center justify-center text-center md:text-left mb-5 md:mb-0">
                     <div className="flex w-full justify-center md:justify-start">
                         <img src={loginImg} className="max-h-[250px]" alt="" />
                     </div>
@@ -68,7 +74,7 @@ const Login = () => {
                 </div>
 
                 {/* Right Side Login From */}
-                <div className="min-w-[400px] border rounded-lg p-6 py-8 mx-auto">
+                <div data-aos="fade-left" className="min-w-[400px] border rounded-lg p-6 py-8 mx-auto">
                     <h1 className="text-2xl text-error mb-3 font-medium">Login</h1>
                     <form onSubmit={handleLogin}>
                         <div>
