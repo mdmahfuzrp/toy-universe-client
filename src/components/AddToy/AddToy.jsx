@@ -41,6 +41,7 @@ const AddToy = () => {
                     icon: 'success',
                     confirmButtonText: 'Continue'
                   })
+                form.reset();
             }
         })
     }
