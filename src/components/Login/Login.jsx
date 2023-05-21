@@ -8,6 +8,7 @@ import { AuthContext } from "../../AuthProviders/AuthProviders";
 import Swal from "sweetalert2";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import useTitle from "../../hooks/useTitle";
 
 const Login = () => {
     const { login, googleLogin, user } = useContext(AuthContext);
@@ -16,6 +17,9 @@ const Login = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const from = location.state?.from?.pathname || '/';
+
+    // Set Title
+    useTitle('Login')
 
 
     const handleLogin = event => {

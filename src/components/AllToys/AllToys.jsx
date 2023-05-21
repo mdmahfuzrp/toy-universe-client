@@ -3,6 +3,7 @@ import NavBar from '../../Shared/NavBar/NavBar';
 import Footer from '../../Shared/Footer/Footer';
 import Toy from './Toy';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const AllToys = () => {
     const [toys, setToys] = useState([]);
@@ -11,6 +12,9 @@ const AllToys = () => {
     const itemsPerPage = 20;
     const totalPages = Math.ceil(totalToys / itemsPerPage);
     const pageNumbers = [...Array(totalPages).keys()];
+
+    // Set Title
+    useTitle('All Toys')
 
     // Data from other place
     const [searchName, setSearchName] = useState('');

@@ -5,11 +5,17 @@ import Footer from '../../Shared/Footer/Footer';
 import { FaCartPlus, FaShoppingBasket } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import useTitle from '../../hooks/useTitle';
 
 
 const ToyDetails = () => {
     const toy = useLoaderData();
     const { toyName, toyPhoto, sellerName, sellerEmail, category, price, quantity, rating, description } = toy;
+    
+    // Set Title
+    useTitle('Toy Details')
+
+
     useEffect(()=>{
         AOS.init({duration: 1500});
     },[])

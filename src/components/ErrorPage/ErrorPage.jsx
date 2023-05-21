@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom';
 import img from '../../assets/404.gif'
 import { FaArrowLeft } from 'react-icons/fa';
+import useTitle from '../../hooks/useTitle';
 const ErrorPage = () => {
+    
+    // Set Title
+    useTitle('404')
     return (
         <div className='min-h-screen flex flex-col items-center justify-center py-5'>
             <h1 className='text-5xl font-semibold text-slate-500 text-center'>Oops,<br />Maybe You Lost !</h1>

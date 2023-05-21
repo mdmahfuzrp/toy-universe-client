@@ -4,6 +4,7 @@ import NavBar from '../../Shared/NavBar/NavBar';
 import Footer from '../../Shared/Footer/Footer';
 import MyToy from './MyToy';
 import Swal from 'sweetalert2';
+import useTitle from '../../hooks/useTitle';
 
 const MyToys = () => {
     const [myToys, setMyToys] = useState([]);
@@ -11,6 +12,10 @@ const MyToys = () => {
     const [sort, setSort] = useState('price');
     const [order, setOrder] = useState('1');
     const [selected, setSelected] = useState('low');
+
+    // Set Title
+    useTitle('My Toys')
+
     // Load My All Toys From DataBase
     useEffect(() => {
         fetch(`http://localhost:5000/toys/email?email=${user?.email}&sort=${sort}&order=${order}`)

@@ -6,11 +6,15 @@ import { FaPhotoVideo, FaUserCircle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProviders/AuthProviders';
 import Swal from 'sweetalert2';
+import useTitle from '../../hooks/useTitle';
 
 const UpdateToy = () => {
     const singleToy = useLoaderData();
     const { user } = useContext(AuthContext);
     const { _id, toyName, category, description, toyPhoto, price, rating, quantity, sellerName, sellerEmail } = singleToy;
+
+    // Set Title
+    useTitle('Update Toy')
 
 
     const handleUpdateToy = (event) => {

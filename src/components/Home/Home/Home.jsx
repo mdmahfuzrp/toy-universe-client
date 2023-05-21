@@ -5,9 +5,13 @@ import Gallery from "../../Gallery/Gallery";
 import ShopByCategory from "../../ShopByCategory/ShopByCategory";
 import Hero from "../Hero/Hero";
 import OurSponsor from "../../OurSponsor/OurSponsor";
+import useDefaultTitle from "../../../hooks/useDefaultTitle";
 
 const Home = () => {
     const allToy = useLoaderData();
+
+    useDefaultTitle('Marvel Universe');
+
     return (
         <div>
             <NavBar></NavBar>

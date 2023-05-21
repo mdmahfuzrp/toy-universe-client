@@ -5,9 +5,13 @@ import { FaPhotoVideo, FaUserCircle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../AuthProviders/AuthProviders';
+import useTitle from '../../hooks/useTitle';
 
 const AddToy = () => {
     const {user} = useContext(AuthContext);
+    
+    // Set Title
+    useTitle('Add Toy')
 
     const handleAddToySubmit = (event) => {
         event.preventDefault();
