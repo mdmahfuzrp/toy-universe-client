@@ -41,21 +41,21 @@ const UpdateToy = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if(data.modifiedCount){
+                if (data.modifiedCount) {
                     Swal.fire({
                         title: `Successful`,
                         text: 'Toy update successful',
                         icon: 'success',
                         confirmButtonText: 'Continue'
-                      })
+                    })
                 }
-                else{
+                else {
                     Swal.fire({
                         title: `Failed`,
                         text: 'Toy update failed',
                         icon: 'error',
                         confirmButtonText: 'Continue'
-                      })
+                    })
                 }
             })
 
@@ -91,6 +91,7 @@ const UpdateToy = () => {
                                                 className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 rounded-r-md ring-inset focus:ring-2 focus:ring-inset focus:ring-error sm:text-md sm:leading-6 outline-none"
                                                 placeholder="Spider man"
                                                 defaultValue={toyName}
+                                                disabled
                                             />
                                         </div>
                                     </div>
@@ -106,17 +107,18 @@ const UpdateToy = () => {
                                             autoComplete="category"
                                             className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-error sm:max-w-xs sm:text-md sm:leading-6 outline-none"
                                             defaultValue={category}
+                                            disabled
                                         >
-                                            <option>Marvel Heros</option>
-                                            <option>Avenger Toys</option>
-                                            <option>Marvel Villains</option>
+                                            <option>Heros</option>
+                                            <option>Toys</option>
+                                            <option>Villains</option>
                                         </select>
                                     </div>
                                 </div>
 
                                 <div className="col-span-full">
                                     <label htmlFor="about" className="block text-md font-medium leading-6 text-gray-900">
-                                        About
+                                        Description
                                     </label>
                                     <div className="mt-2">
                                         <textarea
@@ -128,7 +130,7 @@ const UpdateToy = () => {
                                             placeholder='Description'
                                         />
                                     </div>
-                                    <p className="mt-3 text-md leading-6 text-gray-600">Write a few sentences description.</p>
+                                    <p className="mt-3 text-md leading-6 text-gray-600">Update a few sentences description.</p>
                                 </div>
 
                                 <div className="col-span-full">
@@ -140,7 +142,9 @@ const UpdateToy = () => {
                                             <FaPhotoVideo className="mx-auto h-12 w-12 text-gray-300" aria-hidden="true" />
                                             <div className="mt-4 flex text-md leading-6 text-gray-600">
                                                 <input id="toy-photo" name="toyPhoto" type="text" className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-error placeholder:text-gray-400 outline-0 sm:text-md sm:leading-6" placeholder='PhotoURL'
-                                                    defaultValue={toyPhoto} />
+                                                    defaultValue={toyPhoto}
+                                                    disabled
+                                                />
                                             </div>
                                             <p className="text-xs leading-5 text-gray-600">Choose only http or https toy photo link</p>
                                         </div>
@@ -176,11 +180,12 @@ const UpdateToy = () => {
                                             className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-error placeholder:text-gray-400  sm:text-md sm:leading-6 outline-none"
                                             placeholder='Rating'
                                             defaultValue={rating}
+                                            disabled
                                         />
                                     </div>
                                 </div>
                                 <div className="sm:col-span-2">
-                                    <label htmlFor="country" className="block text-md font-medium leading-6 text-gray-900">
+                                    <label htmlFor="quantity" className="block text-md font-medium leading-6 text-gray-900">
                                         Quantity
                                     </label>
                                     <div className="mt-2">
@@ -216,6 +221,7 @@ const UpdateToy = () => {
                                             className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-error placeholder:text-gray-400  sm:text-md sm:leading-6 outline-none"
                                             placeholder='Seller name'
                                             defaultValue={sellerName}
+                                            disabled
                                         />
                                     </div>
                                 </div>
@@ -233,6 +239,7 @@ const UpdateToy = () => {
                                             className="block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-error placeholder:text-gray-400  sm:text-md sm:leading-6 outline-none"
                                             placeholder='Seller email'
                                             defaultValue={sellerEmail}
+                                            disabled
                                         />
                                     </div>
                                 </div>

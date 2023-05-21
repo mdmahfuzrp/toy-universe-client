@@ -12,6 +12,7 @@ const Footer = () => {
         <footer className="footer items-center mx-auto justify-around p-10 bg-base-200 text-base-content rounded">
             <div className="w-full">
                 <img className="w-[100px] mx-auto" src={logo} alt="" />
+                <h1 className="text-2xl font-medium">Marvel <span className="text-error">Universe</span></h1>
             </div>
             <div className="footer-center space-y-3">
                 <div className="grid grid-flow-col gap-4">
@@ -40,16 +41,22 @@ const Footer = () => {
 
             <div>
                 <div className="">
-                    <span className="footer-title text-[16px]">Newsletter</span>
+                    <span className="text-[16px] uppercase text-error font-medium">Contact</span>
+
                     <div className="form-control">
-                        <label className="label ps-0">
+                        <label className="block">
                             <span className="label-text">Enter your email address</span>
                         </label>
-                        <div className="relative">
-                            <input type="text" placeholder="username@site.com" className="input input-bordered max-w-[234px] ps-2 input-sm pr-[100px]" />
-                            <button className="btn btn-sm text-white btn-error absolute top-0 right-0 rounded-l-none font-normal">Subscribe</button>
+                        <div className="relative mt-1 mb-2">
+                            <input type="text" placeholder="username@site.com" className="input input-bordered max-w-[234px] ps-2 input-sm pr-[90px]" />
+                            <button className="btn btn-sm text-white btn-error absolute top-0 right-0 rounded-l-none font-normal">Contact</button>
                         </div>
                     </div>
+                    <span className="text-[16px] uppercase text-error font-medium">Address</span>
+
+                    <label className="block">
+                        <span className="label-text">#901 - Town, Barisal</span>
+                    </label>
                 </div>
             </div>
         </footer>

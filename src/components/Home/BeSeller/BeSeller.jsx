@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaCalendarAlt, FaHandPaper } from 'react-icons/fa';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const BeSeller = () => {
+    useEffect(()=>{
+        AOS.init({duration: 1500});
+    },[])
     return (
-        <div className="px-5 relative isolate overflow-hidden bg-gray-900 py-16">
-            <div className="sm:w-11/12 my-7 mx-auto">
+        <div className="px-5 relative  my-12 isolate overflow-hidden bg-gray-900 py-16">
+            <div className="sm:w-11/12 mx-auto">
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
                     <div className="max-w-xl lg:max-w-lg">
                         <h2 className="text-3xl font-semibold text-white sm:text-4xl tracking-wide">Be a Toy Seller</h2>

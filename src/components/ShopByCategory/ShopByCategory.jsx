@@ -23,9 +23,12 @@ const ShopByCategory = () => {
     }, [])
 
     return (
-        <div className='sm:w-11/12 px-5 my-10 mx-auto overflow-x-hidden' data-aos="fade-up">
-            <h1 className="text-3xl text-center font-medium" data-aos="fade-left">Toy by <span className="text-error">Category</span></h1>
-            <p className="text-lg text-gray-500 text-center mb-4" data-aos="fade-right">See what is amazing and best product for your today</p>
+        <div className=' overflow-x-hidden' data-aos="fade-up">
+            <div className="uniqHeader">
+                <h1 className="text-3xl text-center font-medium" data-aos="fade-left">Shop by <span className="text-error">Category</span></h1>
+                <p className="text-lg text-gray-500 text-center mb-6" data-aos="fade-right">See what is our most amazing and best product for your today</p>
+            </div>
+            <div className='sm:w-11/12 px-5 my-10 mt-3 mx-auto'>
             <Tabs className='rounded-lg'>
                 <TabList>
                     <Tab onClick={() => setCategory('Heros')}>Marvel Heros</Tab>
@@ -64,6 +67,7 @@ const ShopByCategory = () => {
                     </div>
                 </TabPanel>
             </Tabs>
+            </div>
         </div>
     );
 };

@@ -101,7 +101,7 @@ const AddToy = () => {
 
                                 <div className="col-span-full">
                                     <label htmlFor="about" className="block text-md font-medium leading-6 text-gray-900">
-                                        About
+                                        Description
                                     </label>
                                     <div className="mt-2">
                                         <textarea
@@ -162,7 +162,7 @@ const AddToy = () => {
                                     </div>
                                 </div>
                                 <div className="sm:col-span-2">
-                                    <label htmlFor="country" className="block text-md font-medium leading-6 text-gray-900">
+                                    <label htmlFor="quantity" className="block text-md font-medium leading-6 text-gray-900">
                                         Quantity
                                     </label>
                                     <div className="mt-2">

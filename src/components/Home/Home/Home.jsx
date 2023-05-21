@@ -8,6 +8,7 @@ import OurSponsor from "../../OurSponsor/OurSponsor";
 import useDefaultTitle from "../../../hooks/useDefaultTitle";
 import BeSeller from "../BeSeller/BeSeller";
 import TopSeller from "../TopSeller/TopSeller";
+import ShopByAge from "../../ShopByAge/ShopByAge";
 
 const Home = () => {
     const allToy = useLoaderData();
@@ -24,7 +25,9 @@ const Home = () => {
             <ShopByCategory
                 allToy={allToy}
             ></ShopByCategory>
+            <ShopByAge></ShopByAge>
             <TopSeller></TopSeller>
+
             <Footer></Footer>
         </div>
     );

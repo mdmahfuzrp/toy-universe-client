@@ -9,24 +9,26 @@ const Gallery = () => {
 
     useEffect(() => {
         fetch('http://localhost:5000/toyGallery')
-        .then(res => res.json())
-        .then(GalleryData => {
-            setData(GalleryData);
-        })
+            .then(res => res.json())
+            .then(GalleryData => {
+                setData(GalleryData);
+            })
     }, [])
 
-    useEffect(()=>{
-        AOS.init({duration: 1500});
-    },[])
+    useEffect(() => {
+        AOS.init({ duration: 1500 });
+    }, [])
 
     return (
-        <div className="px-5 App overflow-hidden sm:w-11/12 my-7 mx-auto">
-            <h1 className="text-3xl text-center font-medium" data-aos="fade-right">Toy <span className="text-error">Gallery</span></h1>
-            <p className="text-lg text-gray-500 text-center" data-aos="fade-left">Enter toy paradise, for Exclusive deals! Join now for endless fun and excitement!</p>
-            <div className="galleryWrapper">
+        <div className=" App overflow-hidden">
+            <div className="uniqHeader">
+                <h1 className="text-3xl text-center font-medium" data-aos="fade-right">Toy <span className="text-error">Gallery</span></h1>
+                <p className="text-lg text-gray-500 text-center mb-7" data-aos="fade-left">Enter toy paradise, for Exclusive deals! Join now for endless fun and excitement!</p>
+            </div>
+            <div className="galleryWrapper sm:w-11/12 my-7 mt-4 mx-auto px-5">
                 <div className="galleryContainer" data-aos="fade-up">
                     {
-                        data.map((item, index) => <motion.div 
+                        data.map((item, index) => <motion.div
                             initial={{ y: "2rem", opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{

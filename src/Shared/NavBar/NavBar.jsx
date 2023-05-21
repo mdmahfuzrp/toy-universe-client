@@ -60,7 +60,7 @@ const NavBar = () => {
                     </div>
                     <div className='flex items-center'>
                         <img src={logo} className='w-12' alt="" />
-                        <Link to='/' className='hidden sm:inline text-2xl uppercase font-semibold text-gray-700'>Toy<span className="text-error ms-2">Universe</span></Link>
+                        <Link to='/' className='hidden sm:inline text-2xl uppercase font-semibold text-gray-700'>Marvel<span className="text-error ms-2">Universe</span></Link>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
