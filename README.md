@@ -3,14 +3,14 @@ Marvel Universe is a toy-selling website dedicated to Marvel fans of all ages. W
 
 # Live Link
 To explore the Marvel Universe website, please visit our live link:
-**[Server Site Code]**(https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-server-side-mdmahfuzrp)
-- Server Site Code: https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-server-side-mdmahfuzrp
+[Server Site Code](https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-server-side-mdmahfuzrp)
+* Server Site Code: https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-server-side-mdmahfuzrp
 
-**[Client Site Code]**(https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-mdmahfuzrp)
-- Client Site Code: https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-mdmahfuzrp
+[Client Site Code](https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-mdmahfuzrp)
+* Client Site Code: https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-mdmahfuzrp
 
-**Live Site Link**(https://marvel-universe-client.web.app/)
-- Live Site Link: https://marvel-universe-client.web.app/
+[Live Site Link](https://marvel-universe-client.web.app/)
+* Live Site Link: https://marvel-universe-client.web.app/
 
 
 # Some Features
@@ -26,4 +26,4 @@ To explore the Marvel Universe website, please visit our live link:
 
 ## Feedback
 Last 50 hour i don't sleep at night, but when i see my project is looking very good and the server and client deploy successful then i felt so relaxed, by the way thank you programming hero. **I don't need anyone help in this project, not support session or not any students or mentors, i complete this project with my skill - really it's amazing experience**
-**-** ***MD MAHFUZ RP***
+> Md Mahfuz RP
