@@ -7,6 +7,7 @@ import useTitle from '../../hooks/useTitle';
 
 const AllToys = () => {
     const [toys, setToys] = useState([]);
+    console.log(toys);
     const { totalToys } = useLoaderData();
     const [currentPage, setCurrentPage] = useState(0);
     const itemsPerPage = 20;

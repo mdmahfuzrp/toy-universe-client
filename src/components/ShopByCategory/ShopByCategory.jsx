@@ -39,30 +39,33 @@ const ShopByCategory = () => {
                 <TabPanel>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                         {
-                            categoryToy.map(toy => <ShopByCategoryCard
+                            categoryToy ? categoryToy.map(toy => <ShopByCategoryCard
                                 key={toy?._id}
                                 toy={toy}
                             ></ShopByCategoryCard>)
+                            : 'Loading...'
                         }
                     </div>
                 </TabPanel>
                 <TabPanel>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                         {
-                            categoryToy.map(toy => <ShopByCategoryCard
+                            categoryToy ? categoryToy.map(toy => <ShopByCategoryCard
                                 key={toy?._id}
                                 toy={toy}
                             ></ShopByCategoryCard>)
+                            : 'Loading...'
                         }
                     </div>
                 </TabPanel>
                 <TabPanel>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                         {
-                            categoryToy.map(toy => <ShopByCategoryCard
+                            categoryToy ? categoryToy.map(toy => <ShopByCategoryCard
                                 key={toy?._id}
                                 toy={toy}
                             ></ShopByCategoryCard>)
+                            : 'Loading...'
                         }
                     </div>
                 </TabPanel>
