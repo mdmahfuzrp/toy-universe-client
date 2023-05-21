@@ -6,6 +6,8 @@ import ShopByCategory from "../../ShopByCategory/ShopByCategory";
 import Hero from "../Hero/Hero";
 import OurSponsor from "../../OurSponsor/OurSponsor";
 import useDefaultTitle from "../../../hooks/useDefaultTitle";
+import BeSeller from "../BeSeller/BeSeller";
+import TopSeller from "../TopSeller/TopSeller";
 
 const Home = () => {
     const allToy = useLoaderData();
@@ -13,14 +15,16 @@ const Home = () => {
     useDefaultTitle('Marvel Universe');
 
     return (
-        <div>
+        <div className="">
             <NavBar></NavBar>
             <Hero></Hero>
             <OurSponsor></OurSponsor>
             <Gallery></Gallery>
+            <BeSeller></BeSeller>
             <ShopByCategory
                 allToy={allToy}
             ></ShopByCategory>
+            <TopSeller></TopSeller>
             <Footer></Footer>
         </div>
     );

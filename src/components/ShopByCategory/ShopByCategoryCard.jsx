@@ -12,7 +12,7 @@ const ShopByCategoryCard = ({ toy }) => {
     }
 
     return (
-        <div className='border border-slate-50 shadow-md p-5 rounded-lg'>
+        <div className='border border-slate-200 p-5 rounded-lg'>
             <h1 className='text-lg text-error font-medium'>{toyName}</h1>
             <div className="card card-side flex-col sm:flex-row justify-center items-center p-0 mt-3">
                 <figure className='w-1/2'><img src={toyPhoto} alt="Toys" /></figure>
@@ -30,8 +30,8 @@ const ShopByCategoryCard = ({ toy }) => {
                     </div>
                     <div className="card-actions justify-end px-5">
                         {
-                            user ? <Link to={`/allToys/${_id}`} className="w-full bg-error text-white text-lg py-2 hover:bg-[#e05a5a] text-center">View Details</Link> 
-                            : <Link onClick={handleViewDetails} to={`/allToys/${_id}`} className="w-full bg-error text-white text-lg py-2 hover:bg-[#e05a5a] text-center">View Details</Link>
+                            user ? <Link to={`/allToys/${_id}`} className="px-3 bg-error text-white text-lg py-2 hover:bg-[#e05a5a] text-center">View Details</Link> 
+                            : <Link onClick={handleViewDetails} to={`/allToys/${_id}`} className="px-3 bg-error text-white text-lg py-2 hover:bg-[#e05a5a] text-center">View Details</Link>
                         }
                     </div>
                 </div>

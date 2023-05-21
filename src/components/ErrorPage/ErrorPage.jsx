@@ -7,7 +7,7 @@ const ErrorPage = () => {
     // Set Title
     useTitle('404')
     return (
-        <div className='min-h-screen flex flex-col items-center justify-center py-5'>
+        <div className='min-h-screen flex flex-col items-center justify-center py-5 px-5'>
             <h1 className='text-5xl font-semibold text-slate-500 text-center'>Oops,<br />Maybe You Lost !</h1>
             <img className='w-4/5 md:w-3/5 lg:w-2/5'  src={img} alt="" />
             <Link className='flex items-center btn btn-outline hover:btn-error -mt-10'><span><FaArrowLeft/></span>Go Home</Link>

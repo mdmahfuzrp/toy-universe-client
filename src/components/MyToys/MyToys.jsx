@@ -92,7 +92,7 @@ const MyToys = () => {
     }
 
     return (
-        <div>
+        <div className=' px-5'>
             <NavBar></NavBar>
 
             {/* Code For My Toys Section */}

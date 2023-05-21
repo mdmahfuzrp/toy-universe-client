@@ -10,7 +10,7 @@ const Profile = () => {
     // Set Title
     useTitle('Profile')
     return (
-        <div>
+        <div className='px-5'>
             <NavBar></NavBar>
             <div className='sm:w-11/12 my-7 mx-auto'>
                 <section className="relative isolate overflow-hidden bg-white px-6 py-5 lg:px-8">

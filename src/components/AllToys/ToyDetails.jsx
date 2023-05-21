@@ -20,7 +20,7 @@ const ToyDetails = () => {
         AOS.init({duration: 1500});
     },[])
     return (
-        <div>
+        <div className='px-5'>
             <NavBar></NavBar>
             <div className='sm:w-11/12 my-7 mx-auto overflow-x-hidden'>
                 <div className='flex flex-row gap-x-1'>

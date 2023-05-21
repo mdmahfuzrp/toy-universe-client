@@ -20,7 +20,7 @@ const Gallery = () => {
     },[])
 
     return (
-        <div className="App overflow-hidden">
+        <div className="px-5 App overflow-hidden sm:w-11/12 my-7 mx-auto">
             <h1 className="text-3xl text-center font-medium" data-aos="fade-right">Toy <span className="text-error">Gallery</span></h1>
             <p className="text-lg text-gray-500 text-center" data-aos="fade-left">Enter toy paradise, for Exclusive deals! Join now for endless fun and excitement!</p>
             <div className="galleryWrapper">

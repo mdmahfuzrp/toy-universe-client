@@ -62,7 +62,7 @@ const UpdateToy = () => {
     }
 
     return (
-        <div>
+        <div className=' px-5'>
             <NavBar></NavBar>
 
 

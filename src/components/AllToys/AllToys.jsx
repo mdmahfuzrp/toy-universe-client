@@ -43,7 +43,7 @@ const AllToys = () => {
 
 
     return (
-        <div>
+        <div className='px-5'>
             <NavBar></NavBar>
 
             {/* All Toys Code */}

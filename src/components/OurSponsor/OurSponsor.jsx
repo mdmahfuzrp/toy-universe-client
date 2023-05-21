@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 
 const OurSponsor = () => {
     return (
-        <div className='overflow-x-hidden mt-10 mb-3'>
+        <div className='overflow-x-hidden mt-10 mb-3 px-5'>
             <h1 className="text-xl md:text-4xl text-center font-semibold opacity-75"><span className="text-error">Our </span> Sponsor</h1>
             <div className='sm:w-11/12 mb-7 mx-auto'>
                 <Marquee gradient>
