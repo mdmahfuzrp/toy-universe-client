@@ -29,7 +29,7 @@ const AddToy = () => {
 
         const newToyInfo = {toyName, category, description, toyPhoto, price, rating, quantity, sellerName, sellerEmail}
         
-        fetch('http://localhost:5000/toys', {
+        fetch('https://marvel-universe-server.vercel.app/toys', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

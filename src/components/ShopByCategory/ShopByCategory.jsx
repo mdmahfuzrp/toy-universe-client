@@ -11,7 +11,7 @@ const ShopByCategory = () => {
     const [category, setCategory] = useState('Heros');
 
     useEffect(() => {
-        fetch(`http://localhost:5000/toys/category/${category}`)
+        fetch(`https://marvel-universe-server.vercel.app/toys/category/${category}`)
             .then(res => res.json())
             .then(data => {
                 setCategoryToy(data);

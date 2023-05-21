@@ -29,8 +29,8 @@ const AllToys = () => {
 
     let url = '';
     useEffect(() => {
-        searchName ? url = `http://localhost:5000/toys?page=${currentPage}&limit=${itemsPerPage}&name=${searchName}`
-            : url = `http://localhost:5000/toys?page=${currentPage}&limit=${itemsPerPage}&name=`;
+        searchName ? url = `https://marvel-universe-server.vercel.app/toys?page=${currentPage}&limit=${itemsPerPage}&name=${searchName}`
+            : url = `https://marvel-universe-server.vercel.app/toys?page=${currentPage}&limit=${itemsPerPage}&name=`;
         fetch(url)
             .then(res => res.json())
             .then(data => setToys(data));
