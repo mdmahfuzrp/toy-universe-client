@@ -13,34 +13,50 @@ const AllToys = () => {
     const pageNumbers = [...Array(totalPages).keys()];
 
     // Data from other place
+    const [searchName, setSearchName] = useState('');
+
+    const handleSetSearch = event => {
+        const newValue = event.target.value;
+        setSearchName(newValue);
+        console.log(newValue);
+    }
+
+    console.log(searchName);
+
+    let url = '';
     useEffect(() => {
-        const url = `http://localhost:5000/toys?page=${currentPage}&limit=${itemsPerPage}`;
+        searchName ? url = `http://localhost:5000/toys?page=${currentPage}&limit=${itemsPerPage}&name=${searchName}`
+            : url = `http://localhost:5000/toys?page=${currentPage}&limit=${itemsPerPage}&name=`;
         fetch(url)
             .then(res => res.json())
             .then(data => setToys(data));
-    }, [currentPage]);
+    }, [currentPage, searchName]);
 
 
     const handleSetCurrentPage = (page) => {
         setCurrentPage(page);
     }
 
+
     return (
         <div>
             <NavBar></NavBar>
 
             {/* All Toys Code */}
-            <div className="overflow-x-auto sm:w-11/12 my-7 mx-auto shadow-lg">
-                <table className="table table-zebra w-full">
+            <div className="overflow-x-auto sm:w-11/12 my-7 mx-auto">
+                <div className='max-w-[500px] mx-auto my-5'>
+                    <input onChange={handleSetSearch} type="text" placeholder="Search any toy what you want ?" className="input input-bordered border-t-0 border-x-0 border-b-2 border-error text-center focus:outline-none focus:ring-0 w-full text-lg font-[300] cursor-zoom-in" />
+                </div>
+                <table className="table table-zebra w-full border">
                     {/* head */}
                     <thead>
                         <tr>
-                            <th></th>
+                            <th className='rounded-none'></th>
                             <th className='text-[16px] font-semibold'>Name & Category</th>
                             <th className='text-[16px] font-semibold'>Toy Seller Information</th>
                             <th className='text-[16px] font-semibold'>Price</th>
                             <th className='text-[16px] font-semibold'>Quantity</th>
-                            <th></th>
+                            <th className='rounded-none'></th>
                         </tr>
                     </thead>
 

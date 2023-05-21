@@ -32,9 +32,6 @@ const Hero = () => {
                                         1000, // Waits 2s
                                         'All Villain', // Types 'Three' without deleting 'Two'
                                         1000,
-                                        () => {
-                                            console.log('Sequence completed'); // Place optional callbacks anywhere in the array
-                                        }
                                     ]}
                                     wrapper="span"
                                     cursor={true}

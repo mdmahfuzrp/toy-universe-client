@@ -4,13 +4,21 @@ import './NavBar.css';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../AuthProviders/AuthProviders';
 import { ThreeDots } from 'react-loader-spinner';
+import Swal from 'sweetalert2';
 const NavBar = () => {
     const { user, logOutUser, loading } = useContext(AuthContext);
     const [selected, setSelected] = useState(null);
 
     const handleLogout = () => {
         logOutUser()
-            .then(() => { })
+            .then(() => {
+                Swal.fire({
+                    title: `Logging out`,
+                    text: 'Logout successful',
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                  })
+            })
             .catch(error => {
                 console.log(error);
             })
@@ -52,7 +60,7 @@ const NavBar = () => {
                     </div>
                     <div className='flex items-center'>
                         <img src={logo} className='w-12' alt="" />
-                        <Link to='/' className='text-2xl uppercase font-semibold text-gray-700'>Toy<span className="text-error ms-2">Universe</span></Link>
+                        <Link to='/' className='hidden sm:inline text-2xl uppercase font-semibold text-gray-700'>Toy<span className="text-error ms-2">Universe</span></Link>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">

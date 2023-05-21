@@ -1,9 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../../AuthProviders/AuthProviders';
+import Swal from 'sweetalert2';
 
 const ShopByCategoryCard = ({ toy }) => {
-    const { toyPhoto, rating, toyName, price } = toy;
+    const { user } = useContext(AuthContext);
+    const { _id, toyPhoto, rating, toyName, price } = toy;
 
-    
+    const handleViewDetails = () =>{
+        alert('You have to log in first to view details');
+    }
+
     return (
         <div className='border border-slate-50 shadow-md p-5 rounded-lg'>
             <h1 className='text-lg text-error font-medium'>{toyName}</h1>
@@ -22,7 +29,10 @@ const ShopByCategoryCard = ({ toy }) => {
                         </div>
                     </div>
                     <div className="card-actions justify-end px-5">
-                        <button className="w-full bg-error text-white text-lg py-2 hover:bg-[#e05a5a]">View Details</button>
+                        {
+                            user ? <Link to={`/allToys/${_id}`} className="w-full bg-error text-white text-lg py-2 hover:bg-[#e05a5a] text-center">View Details</Link> 
+                            : <Link onClick={handleViewDetails} to={`/allToys/${_id}`} className="w-full bg-error text-white text-lg py-2 hover:bg-[#e05a5a] text-center">View Details</Link>
+                        }
                     </div>
                 </div>
             </div>
