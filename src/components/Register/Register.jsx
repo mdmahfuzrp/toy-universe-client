@@ -109,7 +109,7 @@ const Register = () => {
 
                 {/* Right Side Login From */}
                 <div className="min-w-[400px] border rounded-lg p-6 py-8 mx-auto">
-                    <h1 className="text-2xl text-error mb-3 font-medium">Login</h1>
+                    <h1 className="text-2xl text-error mb-3 font-medium">Sign Up</h1>
                     <form onSubmit={handleRegister}>
                         <div className="flex lg:gap-4 flex-col md:flex-row">
                             <input name="firstName" onChange={handleOnChange} className="mb-4 md:mb-0 border font-[400] text-lg px-3 py-2 w-full outline-none focus:ring rounded-md" type="text" placeholder="First name" />
